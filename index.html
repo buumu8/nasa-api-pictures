@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- Loader -->
-    <div class="loader hidden">
+    <div class="loader">
       <img src="rocket.svg" alt="Rocket Loading Animation" />
     </div>
     <!-- Container -->
@@ -23,18 +23,20 @@
         <span class="background"></span>
         <!-- Results Nav -->
         <span class="navigation-items" id="resultsNav">
-          <h3 class="clickable">Favorites</h3>
+          <h3 class="clickable" onclick="updateDOM('favourites')">Favorites</h3>
           <h3>&nbsp;&nbsp;●&nbsp;&nbsp;</h3>
-          <h3 class="clickable">Load More</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
         </span>
         <!-- Favourites Nav-->
         <span class="navigation-items hidden" id="favoritesNav">
-          <h3 class="clickable">Load More NASA Images</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">
+            Load More NASA Images
+          </h3>
         </span>
       </div>
       <!-- Images Container -->
       <div class="images-container">
-        <div class="card">
+        <!-- <div class="card">
           <a href="" title="View Full Image" target="_blank">
             <img
               src="https://apod.nasa.gov/apod/image/2208/M16_final.jpg"
@@ -55,11 +57,11 @@
               ><strong>12-12-2022 </strong><span>Copyright Info</span></small
             >
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- Save Confirmation -->
-    <div class="save-confirmed">
+    <div class="save-confirmed" hidden>
       <h1>ADDED!</h1>
     </div>
     <!-- Script -->
